@@ -16,7 +16,7 @@
       <nav class="nav-links" aria-label="Menú principal">
         <a href="index.html#inicio">Inicio</a>
         <a href="index.html#servicios">Servicios</a>
-        <a href="index.html#por-que-elegirnos">Contacto</a>
+        <a href="index.html#contacto">Contacto</a>
         <a href="registro.html" class="btn-link">Registro</a>
       </nav>
     </div>
@@ -47,8 +47,8 @@
               <label for="documento" class="required">RUT / Documento</label>
               <input id="documento" name="documento" type="text" required placeholder="Ej. 12.345.678-9">
 
-              <label for="genero">Género</label>
-              <select id="genero" name="genero">
+              <label for="genero" class="required">Género</label>
+              <select id="genero" name="genero" required>
                 <option value="">Selecciona una opción</option>
                 <option>Masculino</option>
                 <option>Femenino</option>
@@ -56,8 +56,8 @@
                 <option>Prefiero no decir</option>
               </select>
             </div>
-            <label for="nacionalidad">Nacionalidad</label>
-            <select id="nacionalidad" name="nacionalidad">
+            <label for="nacionalidad" class="required">Nacionalidad</label>
+            <select id="nacionalidad" name="nacionalidad" required>
               <option value="">Selecciona tu país</option>
               <option>Argentina</option>
               <option>Brasil</option>
@@ -173,9 +173,15 @@
 
           <p class="form-note">¿Ya tienes cuenta? <a href="#">Iniciar sesión</a></p>
         </form>
+        <div class="registro-success hidden" id="registro-success" aria-live="polite">
+          <h2>Registro completado</h2>
+          <p id="success-message">Gracias por registrarte.</p>
+          <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+        </div>
       </div>
     </section>
   </main>
+  <script src="validaciones.js"></script>
   <footer class="footer">
     <div class="container">
       <p>GlobalImport S.A. — Programación Front End</p>
